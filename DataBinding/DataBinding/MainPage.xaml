@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:DataBinding"
+             mc:Ignorable="d"
+             x:Class="DataBinding.MainPage">
+    <ContentPage.BindingContext>
+        <local:MainPageViewModel/>
+    </ContentPage.BindingContext>
+
+
+    <StackLayout>
+        <Grid HorizontalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Button  Grid.Row="1" Grid.Column="1"
+                     Text="PushME" BackgroundColor="GreenYellow" HorizontalOptions="Center" BorderColor="Red" BorderWidth="2"/>
+
+            <Entry Text="{Binding Name}" Grid.Row="2" Grid.Column="1" BackgroundColor="Aquamarine">
+                <Entry.Triggers>
+                    <Trigger TargetType="Entry"
+                     Property="IsFocused" Value="True">
+                        <Setter Property="BackgroundColor" Value="Yellow" />
+                    </Trigger>
+                </Entry.Triggers>
+            </Entry>
+
+            <StackLayout x:Name="DisplayLabelStackLayout" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OnTapCommand}" CommandParameter="{x:Reference DisplayLabelStackLayout}"/>
+                </StackLayout.GestureRecognizers>
+                <Label x:Name="DisplayLable" Text="{Binding DisplayName}" FontSize="Large"  >
+                    <!--<Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding OnTapCommand}" CommandParameter="{x:Reference DisplayLable}"/>
+                    </Label.GestureRecognizers>-->
+                </Label>
+            </StackLayout>
+
+            <Button  Grid.Row="4" Grid.Column="1"
+                     Text="PushME" BackgroundColor="GreenYellow" HorizontalOptions="Center" BorderColor="Red" BorderWidth="2"/>
+
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
