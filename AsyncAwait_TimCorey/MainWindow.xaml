@@ -16,7 +16,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Margin="10 0"
+        <TextBlock Grid.Row="0" Margin="10"
                    FontSize="28" HorizontalAlignment="Center"
                    Text="Simple Async Demo Test"/>
         
@@ -27,19 +27,19 @@
         
         <Button x:Name="executeAsync" Grid.Row="2"
                 Margin="10" Padding="10"
-                Content="Aysnc Execute" FontSize="28"
+                Content="Async Execute" FontSize="28"
                 Click="executeAsync_Click"/>
 
-        <Button x:Name="executeAsyncInParrallel" Grid.Row="3"
+        <Button x:Name="executeAsyncInParallel" Grid.Row="3"
                 Margin="10" Padding="10"
-                Content="Async in Parralel Execute" FontSize="28"
-                Click="executeAsyncInParrallel_Click"/>
+                Content="Async in Parallel Execute" FontSize="28"
+                Click="executeAsyncInParallel_Click"/>
         
         <Button x:Name="clearTextBlock" Grid.Row="4"
                 Margin="10" Padding="10"
                 Content="Clear TextBox" FontSize="28"
                 Click="clearTextBlock_Click"/>
             
-        <TextBlock x:Name="resultsWindow" Grid.Row="4" Margin="10"/>
+        <TextBlock x:Name="resultsWindow" Grid.Row="5" Margin="10"/>
     </Grid>
 </Window>

@@ -65,10 +65,29 @@ namespace AsyncAwait_TimCorey
             }
         }
 
+        private async Task RunDownLoadAsyncInParallel()
+        {
+            var websites = Prepdata();
+            var tasks = websites.Select(site => Task.Run(() => DownloadWebsite(site))).ToList();
+
+            // This foreach loop converted to LINQ expression by ReSharper
+            //foreach (var site in websites)
+            //{
+            //    tasks.Add(Task.Run(() => DownloadWebsite(site)));
+            //}
+
+            var results =  await Task.WhenAll(tasks);
+
+            foreach (var result in results)
+            {
+                ReportWebsiteInfo(result);
+            }
+        }
+
         private WebsiteDataModel DownloadWebsite(string websiteURL)
         {
-            WebsiteDataModel output = new WebsiteDataModel();
-            WebClient client = new WebClient();
+            var output = new WebsiteDataModel();
+            var client = new WebClient();
 
             output.WebsiteUrl = websiteURL;
             output.WebsiteData = client.DownloadString(websiteURL);
@@ -104,9 +123,16 @@ namespace AsyncAwait_TimCorey
             var elapsedMs = watch.ElapsedMilliseconds;
             resultsWindow.Text += $"Total execution time: {elapsedMs}";
         }
-        private void executeAsyncInParrallel_Click(object sender, RoutedEventArgs e)
-        {
 
+        private async void executeAsyncInParallel_Click(object sender, RoutedEventArgs e)
+        {
+            var watch = System.Diagnostics.Stopwatch.StartNew();
+
+            await RunDownLoadAsyncInParallel();
+
+            watch.Stop();
+            var elapsedMs = watch.ElapsedMilliseconds;
+            resultsWindow.Text += $"Total execution time: {elapsedMs}";
         }
         private void clearTextBlock_Click(object sender, RoutedEventArgs e)
         {
