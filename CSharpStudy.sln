@@ -15,7 +15,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Xamarin", "Xamarin", "{1927
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBinding.Android", "DataBinding\DataBinding.Android\DataBinding.Android.csproj", "{0D1F347A-54E3-4883-BB13-95173AA6C797}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBinding", "DataBinding\DataBinding\DataBinding.csproj", "{8F309A00-E908-4DEE-913F-63E0B8788D59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataBinding", "DataBinding\DataBinding\DataBinding.csproj", "{8F309A00-E908-4DEE-913F-63E0B8788D59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuncDelegate", "FuncDelegate\FuncDelegate.csproj", "{C869A6C3-7AB7-479F-B7CB-13E94E09D114}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeferredExecution", "DeferredExecution\DeferredExecution.csproj", "{353B0920-1481-44AC-8941-C324838670DF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "XAML_Microsoft", "XAML_Microsoft", "{7EB782D3-831D-44E4-B0B9-B57FDA9BF70F}"
 EndProject
@@ -101,6 +105,7 @@ Global
 		{8F309A00-E908-4DEE-913F-63E0B8788D59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F309A00-E908-4DEE-913F-63E0B8788D59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F309A00-E908-4DEE-913F-63E0B8788D59}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 		{8F309A00-E908-4DEE-913F-63E0B8788D59}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
 		{8F309A00-E908-4DEE-913F-63E0B8788D59}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
 		{8F309A00-E908-4DEE-913F-63E0B8788D59}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
@@ -145,6 +150,17 @@ Global
 		{D9071961-358A-4A84-85A4-B0D96A73E4D8}.Debug|iPhone.Build.0 = Debug|Any CPU
 		{D9071961-358A-4A84-85A4-B0D96A73E4D8}.Release|iPhone.ActiveCfg = Release|Any CPU
 		{D9071961-358A-4A84-85A4-B0D96A73E4D8}.Release|iPhone.Build.0 = Release|Any CPU
+||||||| merged common ancestors
+=======
+		{C869A6C3-7AB7-479F-B7CB-13E94E09D114}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C869A6C3-7AB7-479F-B7CB-13E94E09D114}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C869A6C3-7AB7-479F-B7CB-13E94E09D114}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C869A6C3-7AB7-479F-B7CB-13E94E09D114}.Release|Any CPU.Build.0 = Release|Any CPU
+		{353B0920-1481-44AC-8941-C324838670DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{353B0920-1481-44AC-8941-C324838670DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{353B0920-1481-44AC-8941-C324838670DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{353B0920-1481-44AC-8941-C324838670DF}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> 60fc4ceb7a3f029ae5bda5548af4a8edd32e77a2
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
