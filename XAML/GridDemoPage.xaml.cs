@@ -10,6 +10,7 @@ namespace XAML
         public GridDemoPage()
         {
             InitializeComponent();
+            
         }
     }
 }
