@@ -7,12 +7,12 @@ namespace DelegatesAndEvents2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine($"Please enter the threshlod number:");
+            Console.WriteLine($"Please enter the threshold number:");
             var conversionSucceeded = int.TryParse(Console.ReadLine(), out int threshold);
 
             var counter = new Counter();
             if (conversionSucceeded)
-                counter.Threshhold = threshold;
+                counter.Threshold = threshold;
 
             // Subscribe to the event
             counter.ThresholdReached += new EventHandler<ThresholdReachedEventArgs>(Counter_ThresholdReached);

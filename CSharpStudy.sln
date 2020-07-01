@@ -11,15 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelegatesAndEvents3", "Dele
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncAwait_TimCorey", "AsyncAwait_TimCorey\AsyncAwait_TimCorey.csproj", "{7D519958-42FB-423C-BC44-02B08E9643E8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Xamarin", "Xamarin", "{1927589E-3B49-40F3-B5A2-BE05EAFC4935}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuncDelegate", "FuncDelegate\FuncDelegate.csproj", "{C869A6C3-7AB7-479F-B7CB-13E94E09D114}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBinding.Android", "DataBinding\DataBinding.Android\DataBinding.Android.csproj", "{0D1F347A-54E3-4883-BB13-95173AA6C797}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataBinding", "DataBinding\DataBinding\DataBinding.csproj", "{8F309A00-E908-4DEE-913F-63E0B8788D59}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuncDelegate", "FuncDelegate\FuncDelegate.csproj", "{C869A6C3-7AB7-479F-B7CB-13E94E09D114}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeferredExecution", "DeferredExecution\DeferredExecution.csproj", "{353B0920-1481-44AC-8941-C324838670DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeferredExecution", "DeferredExecution\DeferredExecution.csproj", "{353B0920-1481-44AC-8941-C324838670DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,16 +37,6 @@ Global
 		{7D519958-42FB-423C-BC44-02B08E9643E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D519958-42FB-423C-BC44-02B08E9643E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D519958-42FB-423C-BC44-02B08E9643E8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0D1F347A-54E3-4883-BB13-95173AA6C797}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0D1F347A-54E3-4883-BB13-95173AA6C797}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0D1F347A-54E3-4883-BB13-95173AA6C797}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{0D1F347A-54E3-4883-BB13-95173AA6C797}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0D1F347A-54E3-4883-BB13-95173AA6C797}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0D1F347A-54E3-4883-BB13-95173AA6C797}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{8F309A00-E908-4DEE-913F-63E0B8788D59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8F309A00-E908-4DEE-913F-63E0B8788D59}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8F309A00-E908-4DEE-913F-63E0B8788D59}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8F309A00-E908-4DEE-913F-63E0B8788D59}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C869A6C3-7AB7-479F-B7CB-13E94E09D114}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C869A6C3-7AB7-479F-B7CB-13E94E09D114}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C869A6C3-7AB7-479F-B7CB-13E94E09D114}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -64,10 +48,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{0D1F347A-54E3-4883-BB13-95173AA6C797} = {1927589E-3B49-40F3-B5A2-BE05EAFC4935}
-		{8F309A00-E908-4DEE-913F-63E0B8788D59} = {1927589E-3B49-40F3-B5A2-BE05EAFC4935}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {45989184-54DB-44F9-86D9-AD3776F35D11}

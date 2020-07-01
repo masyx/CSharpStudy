@@ -15,11 +15,17 @@ namespace DelegatesAndEvents
             Console.WriteLine($"ProcessAction completed:");
         }
 
-        public void ProcessFunc(int x, int y, Func<int, int, int> func)
+        public void ProcessFunc(int x, int y, Func<int, int, bool> func)
         {
             var result = func(x, y);
             Console.WriteLine($"ProcessFunc completed, result:{result}");
         }
-         
+
+        public void ProcessFuncBool(Func<bool> func)
+        {
+            var result = func;
+            Console.WriteLine($"ProcessFunc completed, result2:{result}");
+        }
+
     }
 }

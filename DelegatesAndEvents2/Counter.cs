@@ -5,35 +5,24 @@ using System.Text;
 namespace DelegatesAndEvents2
 {
     // Class that publishes an event
-    class Counter
+    internal class Counter
     {
-        private int _threshold;
         private int _total;
 
-        public int Threshhold { get => _threshold; set => _threshold = value; }
+        public int Threshold { get; set; }
 
         // Declare the event using EventHandler<T>
         public event EventHandler<ThresholdReachedEventArgs> ThresholdReached;
 
-        public Counter()
-        {
-                
-        }
-        public Counter(int passedThreshold)
-        {
-            _threshold = passedThreshold;
-        }
-
         public void Add(int x)
         {
             _total += x;
-            if (_total < _threshold) return;
-            var args = new ThresholdReachedEventArgs(_threshold, DateTime.Now);
+            if (_total < Threshold) return;
+            var args = new ThresholdReachedEventArgs(Threshold, DateTime.Now);
             // Raising an event. You can also raise an event
             // before you execute a block of code.
             OnThresholdReached(args);
         }
-
 
         // Wrap event invocations inside a protected virtual method
         // to allow derived classes to override the event invocation behavior
@@ -44,7 +33,7 @@ namespace DelegatesAndEvents2
             // immediately after the null check and before the event is raised.
             EventHandler<ThresholdReachedEventArgs> thresholdReached = ThresholdReached;
 
-            // Event will be null if there are no subscribers, cheching for null
+            // Event will be null if there are no subscribers, checking for null
             // Call to raise the event.
             thresholdReached?.Invoke(this, e);
         }

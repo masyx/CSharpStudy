@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 
 namespace DelegatesAndEvents
 {
@@ -37,7 +38,10 @@ namespace DelegatesAndEvents
 
             Func<int, int, int> funcAddDel = (x, y) => x + y;
             Func<int, int, int> funcMultiplyDel = (x, y) => x * y;
-            data.ProcessFunc(4, 11, funcMultiplyDel);
+            Func<int, int, bool> compareNumbers = (x, y) => x == y;
+            Func<bool> returnTrue = () => true;
+            data.ProcessFuncBool(returnTrue);
+            data.ProcessFunc(4, 11, compareNumbers);
 
 
         }
