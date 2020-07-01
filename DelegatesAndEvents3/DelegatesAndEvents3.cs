@@ -6,7 +6,7 @@ namespace DelegatesAndEvents3
 
     namespace DotNetEvents
     {
-        class Program
+        class DelegatesAndEvents3
         {
             static void Main()
             {

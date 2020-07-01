@@ -14,7 +14,7 @@ namespace DelegatesAndEvents
     //public Func<int, int, int> BizRulesDelegate;
     public delegate int BizRulesDelegate(int x, int y);
 
-    class Program
+    internal class DelegatesAndEvents
     {
         static void Main(string[] args)
         {

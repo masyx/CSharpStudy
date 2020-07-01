@@ -3,7 +3,7 @@
 namespace DelegatesAndEvents2
 {
     //Class that subscribes to an event
-    class Program
+    class DelegatesAndEvents2
     {
         static void Main(string[] args)
         {
